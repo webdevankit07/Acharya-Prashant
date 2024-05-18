@@ -16,7 +16,7 @@ const Footer = () => {
         <section className='py-5 text-white bg-dark-1 md:py-10'>
             {/* <div className='container mx-auto'> */}
             <Container>
-                <div className='grid grid-cols-1 gap-10 m-auto text-sm md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-md md:px-10 max-md:py-8'>
+                <div className='grid grid-cols-1 m-auto text-sm md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-md md:px-10 max-md:py-8'>
                     <div>
                         <h3 className='mb-4 font-bold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'सजीव सत्र' : 'LIVE EVENTS'}
