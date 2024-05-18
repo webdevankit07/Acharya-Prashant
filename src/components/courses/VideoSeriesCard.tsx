@@ -11,9 +11,9 @@ interface VideoSeriesCardProps {
 const VideoSeriesCard = ({ language, course }: VideoSeriesCardProps) => {
     const { id, title, subtitle, courseHours, amount, originalAmount, language: Language } = course;
     const seq = `भाग-${course.series.order.seq.toString()}`;
-    const courseDuration = `${Math.floor((courseHours * 60) / 60)} ${language === 'hi' ? 'घंटा' : 'Hours'} ${Math.round(
-        (courseHours * 60) % 60
-    )} ${language === 'hi' ? 'मिनट' : 'Minutes'}`;
+    const courseDuration = `${
+        (courseHours * 60) / 60 > 0 && `${Math.floor((courseHours * 60) / 60)} ${language === 'hi' ? 'घंटा' : 'Hours'}`
+    } ${Math.round((courseHours * 60) % 60)} ${language === 'hi' ? 'मिनट' : 'Minutes'}`;
 
     return (
         <div key={course.id} className='rounded-md hover:bg-slate-100 hover:shadow'>

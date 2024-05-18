@@ -19,7 +19,7 @@ const MobileView = ({ language, searchValue, setSearchValue, setActive, handleSe
         <div className='flex justify-between'>
             <div className={`flex items-center justify-center gap-5 py-1`}>
                 <Image width={80} height={20} src='/ic_videoseries.png' alt='image' />
-                <div className='items-center justify-center md:w-[32rem] lg:w-[35rem] overflow-hidden border rounded-sm shadow hidden md:flex'>
+                <div className='items-center justify-center md:w-[32rem] lg:w-[35rem] overflow-hidden border rounded-sm hidden md:flex'>
                     <button type='button' className='flex gap-2 px-2 py-2.5 text-xs border-r'>
                         {language === 'en' ? 'All' : 'सभी'}
                         <TiArrowSortedDown />

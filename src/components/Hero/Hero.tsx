@@ -11,7 +11,7 @@ import HeroLoadingSkeleton from './HeroLoadingSkeleton';
 const Hero = () => {
     const [expand, setExpand] = useState(false);
     const { language } = useLanguage();
-    const { heroDetails } = useData();
+    const { heroDetails, bottomHeaderSticky } = useData();
     const router = useRouter();
 
     const description = expand ? heroDetails?.description : `${heroDetails?.description.slice(0, 155)}...`;
@@ -19,7 +19,7 @@ const Hero = () => {
     return !heroDetails ? (
         <HeroLoadingSkeleton />
     ) : (
-        <section>
+        <section className={`${bottomHeaderSticky && 'mt-[67px] md:mt-[69px]'}`}>
             <HeroBreadcrumb language={language} />
             <div>
                 <div className='flex items-center gap-4'>
@@ -70,7 +70,7 @@ const Hero = () => {
                     </div>
 
                     <div className='flex-1 px-2 pt-1'>
-                        <h2 className='text-lg font-semibold text-slate-600'>{heroDetails?.subtitle}</h2>
+                        <h2 className='text-lg font-[500] text-slate-900'>{heroDetails?.subtitle}</h2>
                         <div className='text-[15px] md:hidden text-justify text-slate-600'>
                             <p>
                                 {description}

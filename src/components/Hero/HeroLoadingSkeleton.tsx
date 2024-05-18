@@ -6,9 +6,7 @@ const HeroLoadingSkeleton = () => {
         <section>
             <Skeleton className='w-40 h-5 my-5' />
             <div>
-                <div>
-                    <Skeleton className='h-5 sm:w-40' />
-                </div>
+                <Skeleton className='w-40 h-5' />
                 <div className='flex flex-col gap-4 my-4 md:flex-row'>
                     <div className='w-[100%] md:w-[40%] flex flex-col'>
                         <HeroImage imageBasePath={undefined} />

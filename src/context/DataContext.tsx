@@ -9,6 +9,8 @@ type DataContextType = {
     courses: CourseType[] | null;
     relatesContent: RelatedContentType[] | null;
     faq: FaqType[] | null;
+    bottomHeaderSticky: boolean;
+    setBottomHeaderSticky: Dispatch<SetStateAction<boolean>>;
 };
 
 const DataContext = createContext<DataContextType | null>(null);
@@ -19,6 +21,7 @@ const DataContextProvider = ({ children }: { children: ReactNode }) => {
     const [courses, setCourses] = useState<CourseType[] | null>(null);
     const [relatesContent, setRelatedContent] = useState<RelatedContentType[] | null>(null);
     const [faq, setFaq] = useState<FaqType[] | null>(null);
+    const [bottomHeaderSticky, setBottomHeaderSticky] = useState(false);
 
     useEffect(() => {
         (async () => {
@@ -41,7 +44,11 @@ const DataContextProvider = ({ children }: { children: ReactNode }) => {
     }, [language]);
 
     return (
-        <DataContext.Provider value={{ heroDetails, courses, relatesContent, faq }}>{children}</DataContext.Provider>
+        <DataContext.Provider
+            value={{ heroDetails, courses, relatesContent, faq, bottomHeaderSticky, setBottomHeaderSticky }}
+        >
+            {children}
+        </DataContext.Provider>
     );
 };
 
