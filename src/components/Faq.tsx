@@ -10,7 +10,7 @@ const Faq = () => {
     const { faq } = useData();
 
     return (
-        <div className='flex flex-col gap-5 px-4 py-16 md:gap-24 lg:px-16 md:flex-row bg-slate-50'>
+        <section className='flex flex-col gap-5 px-4 py-16 md:gap-24 lg:px-16 md:flex-row bg-slate-50'>
             <div className='md:w-[40%]'>
                 <h1 className='mb-1.5 font-bold text-slate-600'>
                     {language === 'hi' ? 'अक्सर पूछे जाने वाले प्रश्न' : 'FAQs'}
@@ -60,7 +60,7 @@ const Faq = () => {
                     ))}
                 </Accordion>
             </div>
-        </div>
+        </section>
     );
 };
 
