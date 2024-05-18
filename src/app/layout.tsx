@@ -7,13 +7,13 @@ import { ReactNode } from 'react';
 import LanguageContextProvider from '@/context/languageContext';
 import DataContextProvider from '@/context/DataContext';
 
-const fontSans = FontSans({
+export const fontSans = FontSans({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     subsets: ['latin'],
     variable: '--font-sans',
 });
 
-const fontNotoSans = DevaNagari({
+export const fontNotoSans = DevaNagari({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     subsets: ['latin'],
     variable: '--font-sans',

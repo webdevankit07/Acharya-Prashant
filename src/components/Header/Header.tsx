@@ -6,7 +6,7 @@ import BottomHeader from './BottomHeader/BottomHeader';
 const Header = () => {
     return (
         <section>
-            <header>
+            <header className='z-[99999999]'>
                 <TopHeader />
                 <MidHeader />
                 <BottomHeader />

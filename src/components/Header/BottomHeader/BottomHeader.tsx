@@ -23,7 +23,7 @@ const BottomHeader = () => {
 
     return (
         <div
-            className={`w-full py-2 md:py-0.5 bg-white text-slate-600 shadow transition-all ease-in-out duration-300 ${
+            className={`w-full py-2 md:py-0.5 z-[9999999] bg-white text-slate-600 shadow transition-all ease-in-out duration-300 ${
                 sticky && 'fixed top-0 left-0'
             }`}
         >

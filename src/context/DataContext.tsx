@@ -22,21 +22,21 @@ const DataContextProvider = ({ children }: { children: ReactNode }) => {
 
     useEffect(() => {
         (async () => {
-            // const allData = await getAllData();
-            // if (allData) {
-            //     setHeroDetails(allData.details);
-            //     setCourses(allData.courses);
-            //     setRelatedContent(allData.relatedContent);
-            // }
+            const allData = await getAllData();
+            if (allData) {
+                setHeroDetails(allData.details);
+                setCourses(allData.courses);
+                setRelatedContent(allData.relatedContent);
+            }
         })();
     }, []);
 
     useEffect(() => {
         (async () => {
-            // const faqData = await getFaqData(language);
-            // if (faqData) {
-            //     setFaq(faqData);
-            // }
+            const faqData = await getFaqData(language);
+            if (faqData) {
+                setFaq(faqData);
+            }
         })();
     }, [language]);
 

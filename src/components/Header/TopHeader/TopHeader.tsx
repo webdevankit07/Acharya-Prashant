@@ -8,6 +8,7 @@ import { IoCallOutline } from 'react-icons/io5';
 import NavBar from './NavBar';
 import Drawer from './Drawer/Drawer';
 import { useRouter } from 'next/navigation';
+import { fontNotoSans, fontSans } from '@/app/layout';
 
 const TopHeader = () => {
     const { language, setLocalLanguage } = useLanguage();
