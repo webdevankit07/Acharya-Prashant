@@ -1,5 +1,11 @@
+import Container from '@/components/Container';
+
 const Home = () => {
-    return <main className='h-screen'>Home</main>;
+    return (
+        <main className='min-h-screen'>
+            <Container>a</Container>
+        </main>
+    );
 };
 
 export default Home;

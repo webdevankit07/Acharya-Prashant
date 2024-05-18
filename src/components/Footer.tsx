@@ -187,10 +187,11 @@ const Footer = () => {
                                     +91 9650585100
                                 </a>
                             </div>
-                            <div className='grid p-2 my-4 border border-white hover:text-brand-1 hover:border-brand-1 border-solid rounded-[5px] form-btn place-items-center'>
+                            <div className='group grid p-2 my-4 border border-white hover:bg-brand-1 hover:border-brand-1 transition duration-200 border-solid rounded-[5px] form-btn place-items-center'>
                                 <LinkItem
                                     name={language === 'hi' ? 'जुडने के लिए फॉर्म भरें' : 'Fill Form To Connect'}
                                     url={`https://acharyaprashant.org/${language}/enquiry`}
+                                    clasName={'group-hover:text-slate-100'}
                                 />
                             </div>
                         </div>

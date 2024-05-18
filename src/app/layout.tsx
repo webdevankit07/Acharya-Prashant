@@ -7,14 +7,14 @@ import { ReactNode } from 'react';
 import LanguageContextProvider from '@/context/languageContext';
 import DataContextProvider from '@/context/DataContext';
 
-import { cn } from '@/lib/utils';
-
 const fontSans = FontSans({
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     subsets: ['latin'],
     variable: '--font-sans',
 });
 
 const fontNotoSans = DevaNagari({
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     subsets: ['latin'],
     variable: '--font-sans',
 });
@@ -31,11 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     return (
         <html lang='en'>
             <body
-                className={cn(
-                    'min-h-screen bg-background font-sans antialiased',
-                    fontNotoSans.variable,
-                    fontSans.variable
-                )}
+                className={`min-h-screen bg-background font-sans antialiased ${fontNotoSans.variable} ${fontSans.variable}`}
             >
                 <LanguageContextProvider>
                     <DataContextProvider>

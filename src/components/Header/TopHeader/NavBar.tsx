@@ -18,7 +18,7 @@ type ListItemProps = {
 const NavBar = ({ language, className }: NavbarProps) => {
     return (
         <>
-            <ul className={`flex items-center *:cursor-pointer ${className}`}>
+            <ul className={`flex font-semibold tracking-wide items-center *:cursor-pointer ${className}`}>
                 <ListItem url='/' name={language === 'en' ? 'Home' : 'होम'} />
                 <LiveSessionItem language={language} />
                 <ListItem
@@ -60,7 +60,7 @@ const ListItem = ({ url, name, active, className }: ListItemProps) => {
             <Link
                 href={url}
                 target={url !== '/' ? '_blank' : '_self'}
-                className={`inline-block px-2 lg:px-3 py-3.5 ${active && 'bg-brand-2'} ${className}`}
+                className={`inline-block px-1.5 lg:px-2.5 py-3.5 ${active && 'bg-brand-2'} ${className}`}
             >
                 {name}
             </Link>
