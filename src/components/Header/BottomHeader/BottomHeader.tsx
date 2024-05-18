@@ -4,12 +4,14 @@ import { useLanguage } from '@/context/languageContext';
 import React, { useEffect, useState } from 'react';
 import MobileView from './MobileView';
 import ActiveSection from './ActiveSection';
+import { useRouter } from 'next/navigation';
 
 const BottomHeader = () => {
     const [active, setActive] = useState(false);
     const [sticky, setSticky] = useState(false);
     const [searchValue, setSearchValue] = useState('');
     const { language } = useLanguage();
+    const router = useRouter().push;
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -20,6 +22,26 @@ const BottomHeader = () => {
             }
         });
     }, []);
+
+    const handleSearchClick = () => {
+        if (searchValue.length === 0) {
+            router(`https://acharyaprashant.org/${language}/video-modules`);
+        } else {
+            router(`https://acharyaprashant.org/${language}/video-modules/search?q=${searchValue}`);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                if (searchValue.length === 0) {
+                    router(`https://acharyaprashant.org/${language}/video-modules`);
+                } else {
+                    router(`https://acharyaprashant.org/${language}/video-modules/search?q=${searchValue}`);
+                }
+            }
+        });
+    }, [language, searchValue, router]);
 
     return (
         <div
@@ -36,6 +58,7 @@ const BottomHeader = () => {
                         searchValue={searchValue}
                         setSearchValue={setSearchValue}
                         setActive={setActive}
+                        handleSearchClick={handleSearchClick}
                     />
                 )}
             </Container>

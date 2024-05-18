@@ -11,7 +11,7 @@ const Faq = () => {
     const { faq } = useData();
 
     return (
-        <section className='flex flex-col gap-5 px-4 py-16 md:gap-24 lg:px-16 md:flex-row bg-slate-50'>
+        <section className='flex flex-col gap-5 py-16 md:px-4 md:gap-24 lg:px-16 md:flex-row bg-slate-50'>
             <div className='md:w-[40%]'>
                 <h1 className='mb-1.5 font-bold text-slate-600'>
                     {language === 'hi' ? 'अक्सर पूछे जाने वाले प्रश्न' : 'FAQs'}
@@ -39,7 +39,7 @@ const Faq = () => {
                             >
                                 support
                             </Link>{' '}
-                            team
+                            team.
                         </p>
                     )}
                 </div>
@@ -51,13 +51,13 @@ const Faq = () => {
                     <Accordion type='single' collapsible className='w-full'>
                         {faq?.map((item, index) => (
                             <AccordionItem value={`item-${index}`} key={index}>
-                                <AccordionTrigger className='text-base font-semibold text-left text-slate-600'>
+                                <AccordionTrigger className='text-base font-semibold text-left max-sm:text-sm text-slate-600'>
                                     {item.question}
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <p
                                         dangerouslySetInnerHTML={{ __html: item.answer }}
-                                        className='text-[15px] text-slate-600 pr-4'
+                                        className='pr-4 text-slate-600'
                                     ></p>
                                 </AccordionContent>
                             </AccordionItem>

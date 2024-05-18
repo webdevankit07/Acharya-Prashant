@@ -16,12 +16,12 @@ const Footer = () => {
         <section className='py-5 text-white bg-dark-1 md:py-10'>
             {/* <div className='container mx-auto'> */}
             <Container>
-                <div className='grid grid-cols-1 m-auto text-sm md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-md md:px-10 max-md:py-8'>
+                <div className='grid grid-cols-1 gap-5 m-auto text-sm md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-md md:px-10 max-md:py-8'>
                     <div>
-                        <h3 className='mb-4 font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'सजीव सत्र' : 'LIVE EVENTS'}
                         </h3>
-                        <div className='flex flex-col gap-4 font-semibold text-slate-300'>
+                        <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
                             <LinkItem
                                 name={language === 'hi' ? 'गीता समागम' : 'Gita Samagam'}
                                 url={`https://acharyaprashant.org/${language}/online-courses/gita`}
@@ -33,10 +33,10 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-4 font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'बोध साहित्य' : 'WISDOM CONTENT'}
                         </h3>
-                        <div className='flex flex-col gap-4 font-semibold text-slate-300'>
+                        <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
                             <LinkItem
                                 name={language === 'hi' ? 'वीडियो श्रृंखलाएँ' : 'Video Series'}
                                 url={`https://acharyaprashant.org/${language}/courses`}
@@ -56,8 +56,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-4 font-bold md:mb-6'>{language === 'hi' ? 'अधिक जाने' : 'MORE'}</h3>
-                        <div className='flex flex-col gap-4 font-semibold text-slate-300'>
+                        <h3 className='mb-3 text-base font-bold md:mb-6'>{language === 'hi' ? 'अधिक जाने' : 'MORE'}</h3>
+                        <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
                             <LinkItem
                                 name={language === 'hi' ? 'आचार्य प्रशांत के बारे में' : 'About Acharya Prashant'}
                                 url={`https://acharyaprashant.org/${language}/about`}
@@ -81,10 +81,10 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-4 font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'सोशल मीडिया' : 'SOCIAL MEDIA'}
                         </h3>
-                        <div className='flex flex-col gap-4 font-semibold text-slate-300'>
+                        <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
                             <div>
                                 <p>{language === 'hi' ? 'अँग्रेजी के लिये' : 'For English'}</p>
                                 <div className='flex gap-2 py-2'>
@@ -123,7 +123,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-4 font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'डाउनलोड ऐप' : 'DOWNLOAD APP'}
                         </h3>
                         <div className='flex items-center gap-3 my-2'>
@@ -162,7 +162,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-4 font-bold md:mb-6'>{language === 'hi' ? 'सम्पर्क करें' : 'CONTACT US'}</h3>
+                        <h3 className='mb-3 text-base font-bold md:mb-6'>
+                            {language === 'hi' ? 'सम्पर्क करें' : 'CONTACT US'}
+                        </h3>
                         <div className='flex flex-col gap-4 font-semibold text-slate-300'>
                             <div className='flex items-center gap-2'>
                                 <HiOutlineMail className='inline-block text-2xl min-w-6' />

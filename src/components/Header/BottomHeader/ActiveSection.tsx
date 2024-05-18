@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
 import { FaArrowLeftLong } from 'react-icons/fa6';
-import { HiSearch } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
 
 interface ActiveSectionProps {

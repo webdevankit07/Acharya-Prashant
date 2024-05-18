@@ -1,7 +1,7 @@
 import { LanguageType } from '@/types';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { HiSearch } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
 import { TiArrowSortedDown } from 'react-icons/ti';
@@ -11,19 +11,10 @@ interface MobileViewProps {
     searchValue: string;
     setSearchValue: Dispatch<SetStateAction<string>>;
     setActive: Dispatch<SetStateAction<boolean>>;
+    handleSearchClick: () => void;
 }
 
-const MobileView = ({ language, searchValue, setSearchValue, setActive }: MobileViewProps) => {
-    const router = useRouter().push;
-
-    const handleSearchClick = () => {
-        if (searchValue.length === 0) {
-            router(`https://acharyaprashant.org/${language}/video-modules`);
-        } else {
-            router(`https://acharyaprashant.org/hi/video-modules/search?q=${searchValue}`);
-        }
-    };
-
+const MobileView = ({ language, searchValue, setSearchValue, setActive, handleSearchClick }: MobileViewProps) => {
     return (
         <div className='flex justify-between'>
             <div className={`flex items-center justify-center gap-5 py-1`}>

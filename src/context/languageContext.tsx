@@ -11,7 +11,7 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 const LanguageContextProvider = ({ children }: { children: ReactNode }) => {
-    const [language, setLanguage] = useState<LanguageType>('en');
+    const [language, setLanguage] = useState<LanguageType>('hi');
 
     const setLocalLanguage = (localLanguage: LanguageType) => {
         localStorage.setItem('language', localLanguage);

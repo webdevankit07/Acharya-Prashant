@@ -7,7 +7,7 @@ const HeroLoadingSkeleton = () => {
             <Skeleton className='w-40 h-5 my-5' />
             <div>
                 <div>
-                    <Skeleton className='w-40 h-5' />
+                    <Skeleton className='h-5 sm:w-40' />
                 </div>
                 <div className='flex flex-col gap-4 my-4 md:flex-row'>
                     <div className='w-[100%] md:w-[40%] flex flex-col'>
@@ -24,7 +24,7 @@ const HeroLoadingSkeleton = () => {
                     </div>
 
                     <div className='flex-1 px-2 pt-1'>
-                        <Skeleton className='h-5 mb-2 w-72' />
+                        <Skeleton className='w-40 h-5 mb-2 md:w-72' />
                         <div className='text-[15px] md:hidden text-justify text-slate-600'>
                             <>
                                 <Skeleton className='w-full h-3 my-1' />
