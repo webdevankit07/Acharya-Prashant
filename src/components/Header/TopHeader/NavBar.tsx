@@ -60,7 +60,7 @@ const ListItem = ({ url, name, active, className }: ListItemProps) => {
             <Link
                 href={url}
                 target={url !== '/' ? '_blank' : '_self'}
-                className={`inline-block px-1.5 lg:px-2.5 py-3.5 ${active && 'bg-brand-2'} ${className}`}
+                className={`inline-block px-1.5 lg:px-2.5 py-4 ${active && 'bg-brand-2'} ${className}`}
             >
                 {name}
             </Link>

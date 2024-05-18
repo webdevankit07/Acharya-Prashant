@@ -1,6 +1,7 @@
+'use client';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero/Hero';
-import VideoSeries from '@/components/VideoSeries';
+import VideoSeries from '@/components/courses/VideoSeries';
 import Faq from '@/components/Faq/Faq';
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
         <main className='min-h-screen'>
             <Container>
                 <Hero />
-                {/* <VideoSeries /> */}
+                <VideoSeries />
                 <Faq />
             </Container>
         </main>
