@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useData } from '@/context/DataContext';
+import FaqLoadingSkeleton from './FaqLoadingSkeleton';
 
 const Faq = () => {
     const { language } = useLanguage();
@@ -44,21 +45,25 @@ const Faq = () => {
                 </div>
             </div>
             <div className='w-full'>
-                <Accordion type='single' collapsible className='w-full'>
-                    {faq?.map((item, index) => (
-                        <AccordionItem value={`item-${index}`} key={index}>
-                            <AccordionTrigger className='text-base font-semibold text-left text-slate-600'>
-                                {item.question}
-                            </AccordionTrigger>
-                            <AccordionContent>
-                                <p
-                                    dangerouslySetInnerHTML={{ __html: item.answer }}
-                                    className='text-[15px] text-slate-600 pr-4'
-                                ></p>
-                            </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
+                {!faq ? (
+                    <FaqLoadingSkeleton />
+                ) : (
+                    <Accordion type='single' collapsible className='w-full'>
+                        {faq?.map((item, index) => (
+                            <AccordionItem value={`item-${index}`} key={index}>
+                                <AccordionTrigger className='text-base font-semibold text-left text-slate-600'>
+                                    {item.question}
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <p
+                                        dangerouslySetInnerHTML={{ __html: item.answer }}
+                                        className='text-[15px] text-slate-600 pr-4'
+                                    ></p>
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                )}
             </div>
         </section>
     );
