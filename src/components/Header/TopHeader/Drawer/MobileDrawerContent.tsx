@@ -6,6 +6,8 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { BsYoutube, BsTwitter, BsInstagram, BsWikipedia, BsWhatsapp, BsThreads } from 'react-icons/bs';
 import { BiLogoFacebook } from 'react-icons/bi';
 import Image from 'next/image';
+import Link from 'next/link';
+import { PiHandsPrayingBold } from 'react-icons/pi';
 
 interface DrawerContentType {
     language: LanguageType;
@@ -40,7 +42,7 @@ const MobileDrawerContent = ({ language, openLiveSection, setOpenLiveSection }: 
                         className='flex items-center justify-between py-3 cursor-pointer group'
                     >
                         {language === 'hi' ? 'लाइव सत्र' : 'Live Sessions'}
-                        <MdOutlineKeyboardArrowRight />
+                        <MdOutlineKeyboardArrowRight className='text-xl' />
                     </div>
                     <ListItem
                         name={language === 'hi' ? 'पुस्तकें' : 'AP Books'}
@@ -74,6 +76,17 @@ const MobileDrawerContent = ({ language, openLiveSection, setOpenLiveSection }: 
                         name={language === 'hi' ? 'करियर' : 'Careers'}
                         url={`https://acharyaprashant.org/${language}/hiring`}
                     />
+
+                    <div className='w-32 my-2 mb-10'>
+                        <Link
+                            href={`https://acharyaprashant.org/${language}/contribute`}
+                            target='_blank'
+                            className='flex items-center justify-center gap-2 px-4 py-2 text-[15px] font-semibold rounded-md bg-brand-5 text-brand-2'
+                        >
+                            <PiHandsPrayingBold />
+                            <span className='inline-block'>{language === 'hi' ? 'योगदान करें' : 'Donate'}</span>
+                        </Link>
+                    </div>
 
                     <div className='my-3'>
                         <hr />
