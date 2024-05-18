@@ -28,7 +28,6 @@ const VideoSeriesBottomBar = ({ courses }: { courses: CourseType[] | null }) => 
                 <hr className='px-5' />
             </div>
             <div className={`pr-5 max-xl:hidden ${!show(3) && !show(4) && 'hidden'}`}>
-                4
                 <hr className='px-5' />
             </div>
         </div>

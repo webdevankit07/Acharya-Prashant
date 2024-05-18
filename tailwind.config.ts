@@ -23,6 +23,7 @@ const config = {
                 'brand-2': '#ea580c',
                 'brand-3': '#ffedd5',
                 'brand-4': '#fed7aa',
+                'brand-5': '#ffedd5',
                 'dark-1': '#0f172a',
                 'dark-2': '#1e293b',
                 border: 'hsl(var(--border))',

@@ -7,14 +7,15 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/languageContext';
 import Container from './Container';
 import LinkItem from './LinkItem';
+import { MdDownloadForOffline } from 'react-icons/md';
+import Link from 'next/link';
 
 const Footer = () => {
     const { language } = useLanguage();
     const year = new Date().getFullYear();
 
     return (
-        <section className='py-5 text-white bg-dark-1 md:py-10'>
-            {/* <div className='container mx-auto'> */}
+        <section className='py-5 text-white bg-dark-1 md:py-10 max-lg:py-20'>
             <Container>
                 <div className='grid grid-cols-1 gap-5 m-auto text-sm md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-md md:px-10 max-md:py-8'>
                     <div>
@@ -226,7 +227,23 @@ const Footer = () => {
                     </div>
                 </div>
             </Container>
-            {/* </div> */}
+            <div className='fixed lg:hidden bottom-0 z-[99999] w-full py-2.5 bg-brand-5'>
+                <Container>
+                    <div className='flex items-center justify-between w-full h-full'>
+                        <p className='text-base text-slate-900'>
+                            {language === 'hi' ? '130+ ईबुक्स ऍप में पढ़ें' : 'Read 130+ eBooks in App'}
+                        </p>
+                        <Link
+                            href={`https://acharyaprashant.org/app`}
+                            target='_blank'
+                            className='flex items-center justify-center px-4 py-3.5 text-xs rounded-3xl bg-brand-2'
+                        >
+                            <MdDownloadForOffline className='mr-1 text-base rounded-full' />
+                            {language === 'hi' ? 'ऐप डाउनलोड करें' : 'Download App'}
+                        </Link>
+                    </div>
+                </Container>
+            </div>
         </section>
     );
 };
