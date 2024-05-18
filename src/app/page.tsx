@@ -1,15 +1,15 @@
 import Container from '@/components/Container';
-import Faq from '@/components/Faq';
 import Hero from '@/components/Hero/Hero';
 import VideoSeries from '@/components/VideoSeries';
+import Faq from '@/components/Faq';
 
 const Home = () => {
     return (
         <main className='min-h-screen'>
             <Container>
                 <Hero />
-                <VideoSeries />
-                {/* <Faq /> */}
+                {/* <VideoSeries /> */}
+                <Faq />
             </Container>
         </main>
     );
