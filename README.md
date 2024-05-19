@@ -45,6 +45,14 @@ Install node_modules
   npm install
 ```
 
+Create .env file for these variables
+
+```bash
+  NEXT_PUBLIC_API_BASE_URL = https://api.acharyaprashant.org/v2/legacy/courses
+
+  NEXT_PUBLIC_IMAGE_BASE_URL = https://cimg.acharyaprashant.org
+```
+
 Start server
 
 ```bash
