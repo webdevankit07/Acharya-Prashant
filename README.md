@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🚀 About Me
 
-## Getting Started
+Hi there I'm ANKIT YADAV a full stack developer with Nextjs (Reactjs), TypeScript, Nodejs and MongoDB
 
-First, run the development server:
+# Advait Faoundation Project
+
+I am excited to share the development of the Advait Foundation's website frontend! This project leverages the power of Next.js and TypeScript. Tailwind CSS is used for styling and ensuring visually appealing user interface.
+
+-   Website Link :- https://acharyaprashant.vercel.app/
+
+## Tech Stack
+
+**`Next.js` :** React framework for server-side rendering and static site generation.
+
+**`TypeScript` :** Typed superset of JavaScript that improves developer productivity and code quality.
+
+**`Tailwind CSS` :** Utility-first CSS framework for rapid UI development.
+
+## Key Features
+
+-   **Framework**: Developed with `Next.js`, providing server-side rendering and static site generation.
+
+-   **TypeScript**: Ensured type safety and improved developer experience with `TypeScript`, enhancing code quality and maintainability.
+
+-   **Styling**: Utilized `Tailwind CSS` for utility-first, highly customizable styling, resulting in a clean and consistent design across the website.
+
+-   **Responsive Design**: Created a fully `responsive` layout to provide an excellent user experience on all devices, from desktops to mobile phones.
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/webdevankit07/Acharya-Prashant.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install node_modules
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start server
 
-## Learn More
+```bash
+  npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run this project, you will need to add the following environment variables to your .env file
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`NEXT_PUBLIC_API_BASE_URL` = https://api.acharyaprashant.org/v2/legacy/courses
 
-## Deploy on Vercel
+`NEXT_PUBLIC_IMAGE_BASE_URL` = https://cimg.acharyaprashant.org
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔗 Links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://webdev-ankit.vercel.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/webdevankit/)
+
+## Authors
+
+-   [@webdevankit07](https://www.github.com/webdevankit07)

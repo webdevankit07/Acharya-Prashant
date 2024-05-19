@@ -73,7 +73,7 @@ const MobileView = ({ language, searchValue, setSearchValue, setActive, handleSe
                 </a>
             </div>
             <div
-                className={`absolute top-0 left-0 w-full h-screen text-white bg-[#334155]/[.6] z-[9999999] overflow-y-hidden' ${
+                className={`absolute top-0 left-0 w-full h-screen text-white bg-[#334155]/[.6] z-[9999999] overflow-hidden' ${
                     !menuBarActive && 'hidden'
                 }`}
             >
