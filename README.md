@@ -2,7 +2,7 @@
 
 Hi there I'm ANKIT YADAV a full stack developer with Nextjs (Reactjs), TypeScript, Nodejs and MongoDB
 
-# Advait Faoundation Project
+# Advait Foundation Project
 
 I am excited to share the development of the Advait Foundation's website frontend! This project leverages the power of Next.js and TypeScript. Tailwind CSS is used for styling and ensuring visually appealing user interface.
 
