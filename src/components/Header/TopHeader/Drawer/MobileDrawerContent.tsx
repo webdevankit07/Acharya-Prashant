@@ -132,12 +132,12 @@ const MobileDrawerContent = ({ language, openLiveSection, setOpenLiveSection }: 
                             />
                         </a>
                     </div>
-                    <div className='flex flex-col gap-3 mt-5 font-semibold text-slate-100'>
+                    <div className='flex flex-col gap-3 mt-5 font-semibold text-slate-100 pb-10'>
                         <div>
                             <p className='text-base font-normal'>
                                 {language === 'hi' ? 'अँग्रेजी के लिये' : 'For English'}
                             </p>
-                            <div className='flex gap-8 py-2 *:hover:text-slate-100 *:text-xl'>
+                            <div className='flex gap-7 py-2 *:hover:text-slate-100 *:text-2xl'>
                                 <LinkItem icon={BsYoutube} url={`https://www.youtube.com/c/AcharyaPrashant`} />
                                 <LinkItem icon={BsTwitter} url={`https://twitter.com/Prashant_Advait`} />
                                 <LinkItem
@@ -150,7 +150,7 @@ const MobileDrawerContent = ({ language, openLiveSection, setOpenLiveSection }: 
                         </div>
                         <div>
                             <p className='text-base font-normal'>{language === 'hi' ? 'हिंदी के लिये' : 'For Hindi'}</p>
-                            <div className='flex gap-8 py-2 *:hover:text-slate-100 *:text-xl'>
+                            <div className='flex gap-7 py-2 *:hover:text-slate-100 *:text-2xl'>
                                 <LinkItem icon={BsYoutube} url={`https://www.youtube.com/c/ShriPrashant`} />
                                 <LinkItem icon={BsTwitter} url={`https://twitter.com/Advait_Prashant`} />
                                 <LinkItem icon={BsThreads} url={`https://www.threads.net/@acharya_prashant_ap`} />

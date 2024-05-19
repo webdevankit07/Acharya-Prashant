@@ -10,7 +10,7 @@ const MidHeader = () => {
         <div className='py-3 bg-dark-2 text-slate-100'>
             <Container>
                 <div className='flex items-center justify-between gap-5 font-medium lg:justify-center'>
-                    <div className='flex items-center gap-2 text-xs lg:text-base'>
+                    <div className='flex items-center gap-2 text-sm lg:text-base'>
                         <div className='h-4 border rounded-full min-w-4 bg-brand-2'></div>
                         <span>
                             {language === 'en'

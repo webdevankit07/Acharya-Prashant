@@ -17,9 +17,9 @@ const Footer = () => {
     return (
         <section className=' text-white bg-dark-1 md:py-10 py-5  max-lg:pb-20'>
             <Container>
-                <div className='grid grid-cols-1 gap-5 m-auto text-sm md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-md md:px-10 max-md:py-8'>
+                <div className='grid grid-cols-1 max-md:gap-8 m-auto text-base md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-base px-5 md:px-10 max-md:py-8'>
                     <div>
-                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-semibold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'सजीव सत्र' : 'LIVE EVENTS'}
                         </h3>
                         <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
@@ -34,7 +34,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-semibold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'बोध साहित्य' : 'WISDOM CONTENT'}
                         </h3>
                         <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
@@ -57,7 +57,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-3 text-base font-bold md:mb-6'>{language === 'hi' ? 'अधिक जाने' : 'MORE'}</h3>
+                        <h3 className='mb-3 text-base font-semibold md:mb-6'>
+                            {language === 'hi' ? 'अधिक जाने' : 'MORE'}
+                        </h3>
                         <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
                             <LinkItem
                                 name={language === 'hi' ? 'आचार्य प्रशांत के बारे में' : 'About Acharya Prashant'}
@@ -82,7 +84,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-semibold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'सोशल मीडिया' : 'SOCIAL MEDIA'}
                         </h3>
                         <div className='flex flex-col gap-2 font-semibold md:gap-4 text-slate-300'>
@@ -124,7 +126,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-3 text-base font-bold md:mb-6 text-slate-100'>
+                        <h3 className='mb-3 text-base font-semibold md:mb-6 text-slate-100'>
                             {language === 'hi' ? 'डाउनलोड ऐप' : 'DOWNLOAD APP'}
                         </h3>
                         <div className='flex items-center gap-3 my-2'>
@@ -158,7 +160,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='mb-3 text-base font-bold md:mb-6'>
+                        <h3 className='mb-3 text-base font-semibold md:mb-6'>
                             {language === 'hi' ? 'सम्पर्क करें' : 'CONTACT US'}
                         </h3>
                         <div className='flex flex-col gap-4 font-semibold text-slate-300'>

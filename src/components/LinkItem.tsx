@@ -14,7 +14,7 @@ const LinkItem = ({ name, url, icon: Icon, clasName }: LinkItemProps) => {
             href={url}
             target='_blank'
             rel='noreferrer'
-            className={`cursor-pointer hover:text-red-500 w-full' ${Icon && 'text-xl'} ${clasName}`}
+            className={`cursor-pointer hover:text-red-500 font-[500] w-full' ${Icon && 'text-xl'} ${clasName}`}
         >
             {name}
             {Icon && <Icon />}

@@ -29,7 +29,7 @@ const SelectLanguage = ({ language, setLocalLanguage }: SelectLanguageProps) => 
     }, []);
 
     return (
-        <section className='relative z-[9   ]' onClick={() => setOpen(!open)}>
+        <section className='relative z-[9]' onClick={() => setOpen(!open)}>
             <div
                 ref={itemRef}
                 className='flex items-center py-3 cursor-pointer sm:gap-1'
@@ -37,7 +37,7 @@ const SelectLanguage = ({ language, setLocalLanguage }: SelectLanguageProps) => 
             >
                 <div
                     ref={secRef}
-                    className='sm:py-0.5 text-[11px] sm:text-xs border-2 rounded-sm font-semibold text-center w-7 sm:w-[35px]'
+                    className='py-0.5 text-xs border-2 rounded-sm font-semibold text-center w-7 sm:w-[35px]'
                     onClick={() => setOpen(!open)}
                 >
                     {language === 'hi' ? 'HI' : 'EN'}

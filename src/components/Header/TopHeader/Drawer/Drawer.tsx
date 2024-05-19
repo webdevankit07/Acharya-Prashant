@@ -21,7 +21,7 @@ const Drawer = ({ language }: { language: LanguageType }) => {
                 </div>
             </SheetTrigger>
             <SheetContent
-                className={`text-sm pb-16 text-slate-100 sm:bg-inherit z-[99999999] bg-brand-1 sm:text-slate-700 w-full md:w-[1000px]`}
+                className={`text-sm pb-20 text-slate-100 sm:bg-inherit z-[99999999] bg-brand-1 sm:text-slate-700 w-full md:w-[1000px]`}
             >
                 <DrawerHeader
                     language={language}

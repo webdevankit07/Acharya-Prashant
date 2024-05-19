@@ -14,7 +14,7 @@ interface DrawerContentType {
 const DrawerHeader = ({ language, openLiveSection, setOpenLiveSection }: DrawerContentType) => {
     return (
         <>
-            <SheetHeader>
+            <SheetHeader className='max-md:mb-9'>
                 <Link
                     href={`https://acharyaprashant.org/${language}/login?page=https://acharyaprashant.org/${language}/video-modules/series/course-series-eeb9d3`}
                     target='_blank'

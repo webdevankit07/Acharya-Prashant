@@ -16,7 +16,7 @@ const BottomHeader = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > (window.innerWidth < 768 ? 101 : 104) && window.scrollY < 3392) {
+            if (window.scrollY > (window.innerWidth < 768 ? 117 : 104) && window.scrollY < 3384) {
                 setSticky(true);
             } else {
                 setSticky(false);
@@ -46,7 +46,7 @@ const BottomHeader = () => {
 
     return (
         <div
-            className={`w-full py-2 md:py-0.5 z-[9999999] bg-white text-slate-600 shadow transition-all ease-in-out duration-300 ${
+            className={`w-full max-md:h-11 py-2 md:py-0.5 z-[9999999] bg-white text-slate-600 shadow transition-all ease-in-out duration-300 ${
                 bottomHeaderSticky && 'fixed top-0 left-0 transition-all ease-in-out duration-300'
             }`}
         >
