@@ -52,7 +52,7 @@ const SelectLanguage = ({ language, setLocalLanguage }: SelectLanguageProps) => 
             </div>
             <div
                 ref={menuRef}
-                className={`absolute w-[120px] rounded-md text-slate-500 bg-slate-100 drop-shadow-2xl top-14 -left-8 py-1 transition duration-200 ease-in-out ${
+                className={`absolute w-[120px] z-[999999] rounded-md text-slate-500 bg-slate-100 drop-shadow-2xl top-14 -left-8 py-1 transition duration-200 ease-in-out ${
                     open ? 'scale-1 opacity-100' : 'scale-0 opacity-0'
                 }`}
             >

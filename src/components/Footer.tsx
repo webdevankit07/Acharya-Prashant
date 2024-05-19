@@ -15,7 +15,7 @@ const Footer = () => {
     const year = new Date().getFullYear();
 
     return (
-        <section className='py-5 text-white bg-dark-1 md:py-10 max-lg:py-20'>
+        <section className=' text-white bg-dark-1 md:py-10 py-5  max-lg:pb-20'>
             <Container>
                 <div className='grid grid-cols-1 gap-5 m-auto text-sm md:mb-20 md:grid-cols-3 lg:grid-cols-6 md:text-md md:px-10 max-md:py-8'>
                     <div>

@@ -8,8 +8,10 @@ const Header = () => {
         <section>
             <header className='z-[99999999]'>
                 <TopHeader />
-                <MidHeader />
-                <BottomHeader />
+                <div className='relative'>
+                    <MidHeader />
+                    <BottomHeader />
+                </div>
             </header>
         </section>
     );

@@ -17,7 +17,7 @@ const VideoSeriesCard = ({ language, course }: VideoSeriesCardProps) => {
 
     return (
         <div key={course.id} className='rounded-md hover:bg-slate-100 hover:shadow'>
-            <div className='px-4 py-3 rounded-md'>
+            <div className='px-2 sm:px-4 py-3 rounded-md'>
                 <Link href={`https://acharyaprashant.org/${language}/courses/course/${id}`} target='_blank'>
                     <Badge seq={seq} />
                     <div className='mt-5 text-sm text-gray-800'>

@@ -1,4 +1,4 @@
-import { FaqType, LanguageType, ResDataType, ValidationError } from '@/types';
+import { FaqType, LanguageType, ResDataType, TagResponseType, ValidationError } from '@/types';
 import axios from 'axios';
 import { promises } from 'dns';
 
@@ -23,6 +23,17 @@ export const getAllData = async () => {
     try {
         const { data } = await Axios.get('/series/optuser/course-series-eeb9d3');
         return data as ResDataType;
+    } catch (error) {
+        const err = await handleAxiosError(error);
+        throw new Error(err);
+    }
+};
+
+export const getTags = async () => {
+    try {
+        const { data } = await Axios.get('/tags');
+
+        return data as TagResponseType;
     } catch (error) {
         const err = await handleAxiosError(error);
         throw new Error(err);

@@ -6,6 +6,7 @@ import Header from '@/components/Header/Header';
 import { ReactNode } from 'react';
 import LanguageContextProvider from '@/context/languageContext';
 import DataContextProvider from '@/context/DataContext';
+import ActionContextProvider from '@/context/ActionContext';
 
 export const fontSans = FontSans({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -33,13 +34,15 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             <body
                 className={`min-h-screen bg-background font-sans antialiased ${fontNotoSans.variable} ${fontSans.variable}`}
             >
-                <LanguageContextProvider>
-                    <DataContextProvider>
-                        <Header />
-                        {children}
-                        <Footer />
-                    </DataContextProvider>
-                </LanguageContextProvider>
+                <ActionContextProvider>
+                    <LanguageContextProvider>
+                        <DataContextProvider>
+                            <Header />
+                            {children}
+                            <Footer />
+                        </DataContextProvider>
+                    </LanguageContextProvider>
+                </ActionContextProvider>
             </body>
         </html>
     );

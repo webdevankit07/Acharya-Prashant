@@ -1,6 +1,6 @@
 'use client';
-import { Axios, getAllData, getFaqData, handleAxiosError } from '@/api/apiClient';
-import { CourseType, FaqType, HeroDetailsType, RelatedContentType } from '@/types';
+import { Axios, getAllData, getFaqData, getTags, handleAxiosError } from '@/api/apiClient';
+import { CourseType, FaqType, HeroDetailsType, RelatedContentType, TagResponseType } from '@/types';
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useState } from 'react';
 import { useLanguage } from './languageContext';
 
@@ -9,8 +9,7 @@ type DataContextType = {
     courses: CourseType[] | null;
     relatesContent: RelatedContentType[] | null;
     faq: FaqType[] | null;
-    bottomHeaderSticky: boolean;
-    setBottomHeaderSticky: Dispatch<SetStateAction<boolean>>;
+    tags: TagResponseType | null;
 };
 
 const DataContext = createContext<DataContextType | null>(null);
@@ -20,16 +19,18 @@ const DataContextProvider = ({ children }: { children: ReactNode }) => {
     const [heroDetails, setHeroDetails] = useState<HeroDetailsType | null>(null);
     const [courses, setCourses] = useState<CourseType[] | null>(null);
     const [relatesContent, setRelatedContent] = useState<RelatedContentType[] | null>(null);
+    const [tags, setTags] = useState<TagResponseType | null>(null);
     const [faq, setFaq] = useState<FaqType[] | null>(null);
-    const [bottomHeaderSticky, setBottomHeaderSticky] = useState(false);
 
     useEffect(() => {
         (async () => {
             const allData = await getAllData();
+            const tags = await getTags();
             if (allData) {
                 setHeroDetails(allData.details);
                 setCourses(allData.courses);
                 setRelatedContent(allData.relatedContent);
+                setTags(tags);
             }
         })();
     }, []);
@@ -44,9 +45,7 @@ const DataContextProvider = ({ children }: { children: ReactNode }) => {
     }, [language]);
 
     return (
-        <DataContext.Provider
-            value={{ heroDetails, courses, relatesContent, faq, bottomHeaderSticky, setBottomHeaderSticky }}
-        >
+        <DataContext.Provider value={{ heroDetails, courses, relatesContent, faq, tags }}>
             {children}
         </DataContext.Provider>
     );

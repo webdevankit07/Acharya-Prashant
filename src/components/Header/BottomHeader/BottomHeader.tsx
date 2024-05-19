@@ -5,10 +5,10 @@ import React, { useEffect, useState } from 'react';
 import MobileView from './MobileView';
 import ActiveSection from './ActiveSection';
 import { useRouter } from 'next/navigation';
-import { useData } from '@/context/DataContext';
+import { useAction } from '@/context/ActionContext';
 
 const BottomHeader = () => {
-    const { bottomHeaderSticky, setBottomHeaderSticky } = useData();
+    const { bottomHeaderSticky, setSticky } = useAction();
     const [active, setActive] = useState(false);
     const [searchValue, setSearchValue] = useState('');
     const { language } = useLanguage();
@@ -17,12 +17,12 @@ const BottomHeader = () => {
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > (window.innerWidth < 768 ? 101 : 104)) {
-                setBottomHeaderSticky(true);
+                setSticky(true);
             } else {
-                setBottomHeaderSticky(false);
+                setSticky(false);
             }
         });
-    }, [setBottomHeaderSticky]);
+    }, [setSticky]);
 
     const handleSearchClick = () => {
         if (searchValue.length === 0) {

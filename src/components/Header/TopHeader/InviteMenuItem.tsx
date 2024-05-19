@@ -37,7 +37,7 @@ const InviteMenuItem = ({ language }: { language: LanguageType }) => {
                 </li>
                 <div
                     ref={menuRef}
-                    className={`absolute px-1.5 py-2 rounded-md text-slate-600 bg-slate-100 drop-shadow-2xl top-14 -left-8 transition duration-200 ease-in-out ${
+                    className={`absolute px-1.5 py-2 z-[999999] rounded-md text-slate-600 bg-slate-100 drop-shadow-2xl top-14 -left-8 transition duration-200 ease-in-out ${
                         open ? 'scale-1 opacity-100' : 'scale-0 opacity-0'
                     }`}
                 >

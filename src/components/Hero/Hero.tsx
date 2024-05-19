@@ -7,11 +7,13 @@ import { useRouter } from 'next/navigation';
 import HeroImage from './HeroImage';
 import HeroBreadcrumb from './HeroBreadcrumb';
 import HeroLoadingSkeleton from './HeroLoadingSkeleton';
+import { useAction } from '@/context/ActionContext';
 
 const Hero = () => {
     const [expand, setExpand] = useState(false);
     const { language } = useLanguage();
-    const { heroDetails, bottomHeaderSticky } = useData();
+    const { heroDetails } = useData();
+    const { bottomHeaderSticky } = useAction();
     const router = useRouter();
 
     const description = expand ? heroDetails?.description : `${heroDetails?.description.slice(0, 155)}...`;

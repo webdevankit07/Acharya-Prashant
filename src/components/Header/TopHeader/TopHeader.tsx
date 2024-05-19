@@ -32,7 +32,7 @@ const TopHeader = () => {
                         </div>
                         <div className='flex items-center gap-2'>
                             <div className='px-3 py-1 text-xs font-semibold border rounded-md md:hidden'>
-                                <a href={`https://acharyaprashant.org/${language}/contribute`}>
+                                <a href={`https://acharyaprashant.org/${language}/contribute`} target='_blank'>
                                     {language === 'hi' ? 'योगदान करें' : 'Donate'}
                                 </a>
                             </div>

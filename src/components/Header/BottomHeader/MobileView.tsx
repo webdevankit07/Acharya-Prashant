@@ -1,10 +1,12 @@
-import { LanguageType } from '@/types';
+'use client';
+import { useAction } from '@/context/ActionContext';
+import { LanguageType, TagType } from '@/types';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import React, { Dispatch, SetStateAction, useEffect } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { HiSearch } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
 import { TiArrowSortedDown } from 'react-icons/ti';
+import MenuBar from './MenuBar';
 
 interface MobileViewProps {
     language: LanguageType;
@@ -15,12 +17,32 @@ interface MobileViewProps {
 }
 
 const MobileView = ({ language, searchValue, setSearchValue, setActive, handleSearchClick }: MobileViewProps) => {
+    const { menuBarActive, setMenuBarActive } = useAction();
+    const [childTags, setChildTags] = useState<TagType[] | null>(null);
+
+    const menuBarRef = useRef(null);
+    const btnRef = useRef(null);
+
+    useEffect(() => {
+        window.addEventListener('click', (e) => {
+            if (e.target !== btnRef.current && e.target !== menuBarRef.current) {
+                setMenuBarActive(false);
+                setChildTags(null);
+            }
+        });
+    }, [setMenuBarActive]);
+
     return (
         <div className='flex justify-between'>
             <div className={`flex items-center justify-center gap-5 py-1`}>
                 <Image width={80} height={20} src='/ic_videoseries.png' alt='image' />
                 <div className='items-center justify-center md:w-[32rem] lg:w-[35rem] overflow-hidden border rounded-sm hidden md:flex'>
-                    <button type='button' className='flex gap-2 px-2 py-2.5 text-xs border-r'>
+                    <button
+                        ref={btnRef}
+                        type='button'
+                        className='flex gap-2 px-2 py-2.5 text-xs border-r'
+                        onClick={() => setMenuBarActive(!menuBarActive)}
+                    >
                         {language === 'en' ? 'All' : 'सभी'}
                         <TiArrowSortedDown />
                     </button>
@@ -49,6 +71,18 @@ const MobileView = ({ language, searchValue, setSearchValue, setActive, handleSe
                 >
                     {language === 'en' ? 'Login' : 'लॉगिन करें'}
                 </a>
+            </div>
+            <div
+                className={`absolute top-0 left-0 w-full h-screen text-white bg-[#334155]/[.6] z-[9999999] overflow-y-hidden' ${
+                    !menuBarActive && 'hidden'
+                }`}
+            >
+                <div
+                    ref={menuBarRef}
+                    className='absolute py-5 rounded-md px-4 min-w-64 h-[600px] bg-white cursor-pointer left-32 lg:left-44 xl:left-52 2xl:left-96 top-28'
+                >
+                    <MenuBar setChildTags={setChildTags} childTags={childTags} />
+                </div>
             </div>
         </div>
     );

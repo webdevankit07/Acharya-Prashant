@@ -75,4 +75,17 @@ export type FaqType = {
     answer: string;
 };
 
+export type TagType = {
+    name: {
+        hindi: string;
+        english: string;
+    };
+    tagId: number;
+    parent: number;
+    level: number;
+    hasChildren: boolean;
+};
+
+export type TagResponseType = TagType[][];
+
 export type ResDataType = { details: HeroDetailsType; courses: CourseType[]; relatedContent: RelatedContentType[] };
