@@ -35,9 +35,13 @@ const DrawerHeader = ({ language, openLiveSection, setOpenLiveSection }: DrawerC
                         </>
                     ) : (
                         <>
-                            <div className='-mx-3 sm:hidden px-3 py-1.5 border-2 rounded-md text-slate-100'>
+                            <Link
+                                href={`https://acharyaprashant.org/${language}/login?page=https://acharyaprashant.org/${language}/video-modules/series/course-series-eeb9d3`}
+                                target='_blank'
+                                className='-mx-3 sm:hidden px-3 py-1.5 border-2 rounded-md text-slate-100'
+                            >
                                 {language === 'hi' ? 'लॉगिन करें' : 'Login'}
-                            </div>
+                            </Link>
                         </>
                     )}
                     <div>
