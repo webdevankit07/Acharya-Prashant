@@ -22,10 +22,15 @@ const MobileView = ({ language, searchValue, setSearchValue, setActive, handleSe
 
     const menuBarRef = useRef(null);
     const btnRef = useRef(null);
+    const childListMenuRef = useRef(null);
 
     useEffect(() => {
         window.addEventListener('click', (e) => {
-            if (e.target !== btnRef.current && e.target !== menuBarRef.current) {
+            if (
+                e.target !== btnRef.current &&
+                e.target !== menuBarRef.current &&
+                e.target !== childListMenuRef.current
+            ) {
                 setMenuBarActive(false);
                 setChildTags(null);
             }
@@ -77,12 +82,12 @@ const MobileView = ({ language, searchValue, setSearchValue, setActive, handleSe
                     !menuBarActive && 'hidden'
                 }`}
             >
-                <div
-                    ref={menuBarRef}
-                    className='absolute py-5 rounded-md px-4 min-w-64 h-[600px] bg-white cursor-pointer left-32 lg:left-44 xl:left-52 2xl:left-96 top-28'
-                >
-                    <MenuBar setChildTags={setChildTags} childTags={childTags} />
-                </div>
+                <MenuBar
+                    setChildTags={setChildTags}
+                    childTags={childTags}
+                    menuBarRef={menuBarRef}
+                    childListMenuRef={childListMenuRef}
+                />
             </div>
         </div>
     );

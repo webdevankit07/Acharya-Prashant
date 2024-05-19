@@ -133,31 +133,26 @@ const Footer = () => {
                                 {language === 'hi' ? 'आचार्य प्रशांत' : 'Acharya Prashant'}
                             </h3>
                         </div>
-                        <div>
+                        <div className='flex flex-row md:flex-col gap-4 mt-3'>
                             <a
                                 href='https://play.google.com/store/apps/details?id=org.acharyaprashant.apbooks&pli=1'
                                 target='_blank'
-                                rel='noreferrer'
                             >
                                 <Image
                                     width={112}
                                     height={32}
                                     src='/PlayStore logo.png'
                                     alt='google-play-store'
-                                    className='mt-4 border border-white border-solid rounded-[5px]'
+                                    className='border border-white border-solid rounded-[5px]'
                                 />
                             </a>
-                            <a
-                                href='https://apps.apple.com/in/app/acharya-prashant/id1603611866'
-                                target='_blank'
-                                rel='noreferrer'
-                            >
+                            <a href='https://apps.apple.com/in/app/acharya-prashant/id1603611866' target='_blank'>
                                 <Image
                                     width={112}
                                     height={32}
                                     src='/AppStore logo.png'
                                     alt='app-store'
-                                    className='mt-4 border border-white border-solid rounded-[5px]'
+                                    className='border border-white border-solid rounded-[5px]'
                                 />
                             </a>
                         </div>

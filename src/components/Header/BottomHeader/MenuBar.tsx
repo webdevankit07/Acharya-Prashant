@@ -8,9 +8,11 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 interface MenuBarProps {
     childTags: TagType[] | null;
     setChildTags: Dispatch<SetStateAction<TagType[] | null>>;
+    menuBarRef: React.MutableRefObject<null>;
+    childListMenuRef: React.MutableRefObject<null>;
 }
 
-const MenuBar = ({ childTags, setChildTags }: MenuBarProps) => {
+const MenuBar = ({ childTags, setChildTags, childListMenuRef, menuBarRef }: MenuBarProps) => {
     const [activeChildDrawer, setACtiveChildDrawer] = useState(false);
     const { language } = useLanguage();
     const { tags } = useData();
@@ -29,7 +31,16 @@ const MenuBar = ({ childTags, setChildTags }: MenuBarProps) => {
     }, [childTags]);
 
     return (
-        <div className='text-slate-500 font-medium'>
+        <div
+            ref={menuBarRef}
+            className='absolute py-5 rounded-md px-4 text-slate-500 font-medium min-w-64 h-[600px] bg-white cursor-pointer left-32 lg:left-44 xl:left-52 2xl:left-96 top-28'
+        >
+            {/* <div className='text-slate-500 font-medium'> */}
+            <Link href={`https://acharyaprashant.org/${language}/video-modules/`} target='_blank' className='w-full'>
+                <div className='flex items-center justify-between w-full py-2 hover:text-brand-2'>
+                    <span className='text-sm'>{language === 'hi' ? `सभी` : `All`}</span>
+                </div>
+            </Link>
             {tags &&
                 tags[0].map((tag) => (
                     <div key={tag.tagId}>
@@ -61,6 +72,7 @@ const MenuBar = ({ childTags, setChildTags }: MenuBarProps) => {
                             className={`block absolute top-0 px-4 py-5 overflow-y-scroll rounded-r-md border-l left-[96%] min-w-64 h-[600px] bg-white ${
                                 !activeChildDrawer && 'hidden'
                             }`}
+                            ref={childListMenuRef}
                         >
                             {childTags?.map((tag) => (
                                 <div key={tag.tagId} className='group flex items-center justify-between'>
