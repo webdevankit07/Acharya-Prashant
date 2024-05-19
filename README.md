@@ -8,6 +8,11 @@ I am excited to share the development of the Advait Foundation's website fronten
 
 -   Website Link :- https://acharyaprashant.vercel.app/
 
+![Screenshot 2024-05-19 111313](https://github.com/webdevankit07/Acharya-Prashant/assets/126321571/0514291e-266b-40e9-a30d-7cf296ff658e)
+![Screenshot 2024-05-19 111342](https://github.com/webdevankit07/Acharya-Prashant/assets/126321571/e2116eb1-36c3-4791-83d2-f638158e1ad2)
+![Screenshot 2024-05-19 111515](https://github.com/webdevankit07/Acharya-Prashant/assets/126321571/18958a20-a6dc-4d01-a701-391711603fba)
+![Screenshot 2024-05-19 111915](https://github.com/webdevankit07/Acharya-Prashant/assets/126321571/76c20118-3d9b-4a0a-99c2-985604b72216)
+
 ## Tech Stack
 
 **`Next.js` :** React framework for server-side rendering and static site generation.
